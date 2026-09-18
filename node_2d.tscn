@@ -190,3 +190,16 @@ texture = ExtResource("7_d21ai")
 rotation = -3.1415925
 scale = Vector2(20.277157, 20.277157)
 shape = SubResource("RectangleShape2D_a42ag")
+
+[node name="wintext" type="Label" parent="." unique_id=1543550969]
+visible = false
+offset_left = 50.0
+offset_top = -73.0
+offset_right = 1132.0
+offset_bottom = 556.0
+theme_override_constants/line_spacing = 3
+theme_override_fonts/font = ExtResource("5_kdubu")
+theme_override_font_sizes/font_size = 190
+text = "
+you win
+or something"

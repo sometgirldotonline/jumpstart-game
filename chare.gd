@@ -29,6 +29,8 @@ func _physics_process(delta: float) -> void:
 		for c in all_coins:
 			c.get_parent().show()
 			$"../win".hide()
+			$"../wintext".hide()
+			
 	for c in all_coins:
 		if c.shape.collide(c.global_transform, $playersowncollider.shape, $playersowncollider.global_transform) and c.get_parent().visible:
 			coins_collected+=1;
@@ -47,7 +49,8 @@ func _physics_process(delta: float) -> void:
 		scale = Vector2(44.23,44.23)
 		JUMP_VELOCITY = -400;
 	if $"../win/cc".shape.collide( $"../win/cc".global_transform, $playersowncollider.shape, $playersowncollider.global_transform) and  $"../win".visible:
-		position = Vector2(0,0)
+		$"../win".hide()
+		$"../wintext".show()
 #areabox: for when player is out of bounds, if we are colliding we're in bounds, this is a CollisonShape2D
 #playersowncollider, our players CollisonShape2D
 	# Get the input direction and handle the movement/deceleration.
